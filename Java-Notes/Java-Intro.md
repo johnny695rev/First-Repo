@@ -19,3 +19,6 @@ javac HelloWorld.java
 //compiles
 java HelloWorld
 //runs .class file
+
+## Interfaces
+Classes are like blueprints, Interfaces are like contracts. Classes and implement multiple interfaces. Only a single class can be extended.

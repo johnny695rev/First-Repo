@@ -1,6 +1,6 @@
 public class LunchRoom {
     public static void main(String[] args){
-        Food myBurrito = new Burrito();
+        Burrito myBurrito = new Burrito();
         Food myCroissant = new Croissant();
 
         myBurrito.eat();
