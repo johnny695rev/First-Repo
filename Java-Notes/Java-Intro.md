@@ -22,3 +22,6 @@ java HelloWorld
 
 ## Interfaces
 Classes are like blueprints, Interfaces are like contracts. Classes and implement multiple interfaces. Only a single class can be extended.
+
+## Abstract vs Interface
+If only sharing methods use interface. If also sharing variables use Abstract.
