@@ -23,7 +23,7 @@ public class Car{
         System.out.println(Car.count);
 
         myCar.drive();
-        checkCount();
+        Car.checkCount();
     }
 
     public void drive(){
