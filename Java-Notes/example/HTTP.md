@@ -24,3 +24,15 @@ response components
     - 300 redirect
     - 400 user error (clientside error)
     - 500 server error (dev messed up: bad thing)
+
+    # JSON
+    JavaScript Object Notation (JSON) is a way to format info in http requests. Formatted strings
+
+    ```json
+    {
+        "keyOne":"value one",
+        "keyTwo":2,
+        "keyThree":true
+    }
+    ```
+    jsons accept strings, numbers, and booleans.

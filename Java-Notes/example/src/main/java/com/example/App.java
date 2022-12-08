@@ -37,6 +37,43 @@ public class App
             ctx.status(200);
         });
 
+        app.get("/protectedGet/{num}", ctx -> {
+            String numAsString = ctx.pathParam("num");
+            int num = Integer.parseInt(numAsString);
+            try{
+                String person = names.get(num);
+                ctx.result(person);
+                ctx.status(200);
+            } catch (IndexOutOfBoundsException e) {
+                ctx.result("No person");
+                ctx.status(404);
+            }
+        });
+
+        app.put("/replace/{num}", ctx -> {
+            String numAsString = ctx.pathParam("num");
+            int num = Integer.parseInt(numAsString);
+            String replacePerson = ctx.body();
+            names.set(num, replacePerson);
+            ctx.result("Replaced");
+            ctx.status(200);
+        });
+
+        app.patch("/update/{num}", ctx -> {
+            String numAsString = ctx.pathParam("num");
+            int num = Integer.parseInt(numAsString);
+            String updatedInformation = ctx.body();
+            names.set(num, updatedInformation);
+            ctx.result("Updated");
+            ctx.status(200);
+        });
+
+        app.delete("/delete", ctx -> {
+            names.clear();
+            ctx.result("deleted");
+            ctx.status(200);
+        });
+
         app.start();
     }
 }
