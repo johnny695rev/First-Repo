@@ -2,13 +2,25 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import io.javalin.Javalin;
 
 public class Library {
-    //
+    //imports slf4j logger
+    public static Logger logger = LoggerFactory.getLogger(Library.class);
     static List<Book> library = new ArrayList<>();
 
     public static void main(String[] args) {
+        
+        logger.trace("This is the trace level");
+        logger.debug("This is at the debug level");
+        logger.info("Application start");
+        logger.warn("warning");
+        logger.error("error");
+        
         Book startingBook = new Book();
         startingBook.setTitle("Fellows");
         startingBook.setAuthor("Jr");

@@ -36,7 +36,7 @@
 
     <!-- root: default log settings -->
     <root level="INFO">
-        <appender-ref ref="ROLLING"/>
+        <appender-ref ref="STDOUT"/>
     </root>
 
 </configuration>
